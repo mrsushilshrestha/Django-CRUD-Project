@@ -22,6 +22,12 @@ urlpatterns = [
     path("polls/", include("polls.urls")),
     path("admin/", admin.site.urls), 
     path('', poll_views.index, name='home'),
+    
+
+
+    path('questions/', poll_views.question_list),
+    
+    
       
     path('admin-login/', poll_views.CustomLoginView.as_view(), name='admin_login'),
 
